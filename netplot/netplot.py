@@ -14,13 +14,13 @@ import numpy as np
 import pandas as pd
 import termplotlib as tpl
 
-from processor.process_processor import ProcessProcessor
-from processor.raw_processor import RawProcessor
-from processor.host_processor import HostProcessor
-from config.config import Config
+from process_processor import ProcessProcessor
+from raw_processor import RawProcessor
+from host_processor import HostProcessor
+from config import Config
 
 # arguments
-from provider.DomainProvider import DomainProvider
+from DomainProvider import DomainProvider
 
 config = None
 
@@ -141,3 +141,7 @@ def main():
         processor = ProcessProcessor(config)
 
     sniff_packets()
+
+if __name__=="__main__":
+    main()
+    
